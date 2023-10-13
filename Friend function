@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class B;
+class A
+{
+	public:
+		int a;
+	A()
+	{
+	   a=10;
+	}
+	friend void sub(A,B);
+};
+class B
+{
+	public:
+		int b;
+	B()
+	{
+		b=20;
+	}
+	friend void sub(A,B);
+	
+};
+void  sub( A A1, B B1)
+{
+	cout<< A1.a-B1.b;
+}
+int main()
+{
+	A t;
+	B s;
+	sub(t,s);
+	return 0;
+}
