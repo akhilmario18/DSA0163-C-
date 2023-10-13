@@ -1,0 +1,63 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class person
+{
+	public:
+		string name;
+	void get()
+	{
+		cout<<"enter person  name:"<<endl;
+		cin>>name;
+	}
+    virtual	void work()
+    {
+    	cout<<name<<" my  work is developer"<<endl;
+	}
+		
+};
+class employee: public person
+{
+	public:
+		string  nam;
+	void go()
+		{
+			cout<<"enter employee name"<<endl;
+			cin>>nam;	
+		}
+		void work()
+		{
+			cout<<nam<<" my work is tester"<<endl;
+		}
+};
+class  manager: public person
+{
+	public:
+		string namm;
+	void set()
+	{
+		cout<<"enter manager name:"<<endl;
+		cin>>namm;
+	}
+	void work()
+	{
+		cout<<namm<<"my work is  managing details"<<endl;
+	}
+		
+};
+int main()
+{
+	person *d,c;
+	employee a;
+	manager b;
+	a.go();
+	b.set();
+	c.get();
+	d=&a;
+	d->work();
+	d=&b;
+	d->work();
+	d=&c;
+	d->work();
+		
+}
