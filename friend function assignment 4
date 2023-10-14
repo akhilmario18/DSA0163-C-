@@ -1,0 +1,23 @@
+#include <iostream>
+class MyClass;
+
+void displayValue(const MyClass& obj);
+class MyClass {
+private:
+    int value;
+
+public:
+    MyClass(int val) : value(val) {}
+
+    friend void displayValue(const MyClass& obj);
+};
+
+void displayValue(const MyClass& obj) {
+    std::cout << "The value in MyClass is: " << obj.value << std::endl;
+}
+
+int main() {
+    MyClass obj(5);
+    displayValue(obj); 
+    return 0;
+}
