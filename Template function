@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+template <typename T> 
+T myMax(T x, T y)
+{
+    return (x > y) ? x : y;
+}
+ template<typename T> T min1(T z, T k)
+{
+    return (z < k) ? z : k;
+}
+template <typename T> T sq(T x){
+cout<<"square: ";
+return(x*x);
+}
+template <typename T>T cube1(T x)
+{
+cout<<"cube: ";
+return(x*x*x);
+}
+ int main()
+{
+int a,b;
+	double a1,b1;
+	cout<<"enter the A and B: ";
+	cin>>a>>b;
+    cout << myMax<int>(a, b) << endl;
+    cout << min1<int>(a, b) << endl;
+      cout <<"a"<< sq<int>(a) << endl;
+      cout <<"b" <<sq<int>(b) << endl;
+      cout <<"a"<< cube1<int>(a) << endl;
+      cout <<"b"<< cube1<int>(b) << endl;
+      	cout<<"enter the float A and B:";
+	cin>>a1>>b1;
+    cout << myMax<double>(a1, b1) << endl;
+    cout << min1<double>(a1,b1) << endl;
+ cout <<"a"<< sq<double>(a) << endl;
+      cout <<"b" <<sq<double>(b) << endl;
+      cout <<"a"<< cube1<double>(a) << endl;
+      cout <<"b"<< cube1<double>(b) << endl;
+    return 0;
+}
