@@ -1,0 +1,33 @@
+#include<iostream>
+#include<iostream>
+#include<string>
+
+using namespace std;
+class animal
+{
+	public:
+	virtual void eat()=0;
+};
+class dog:public animal
+{
+	public:
+		void eat()
+		{
+			cout<<"dog eats meat";
+		}
+};
+class cat:public animal
+{
+	public:
+		void eat()
+		{
+			cout<<"cat eats fish"<<endl;
+		}
+};
+int main()
+{
+	cat c1;
+	dog d1;
+	c1.eat();
+	d1.eat();
+}
