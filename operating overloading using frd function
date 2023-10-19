@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+class B;
+class A{
+	public:
+		int a;
+		A(){
+			cout<<"enter the number: ";
+			cin>>a;
+		}
+		friend void operator+(A,B);
+		friend void operator-(A, B);
+		friend void operator*(A,B);
+		friend void operator/(A, B);
+};
+class B{
+	public:
+		int b;
+		B(){
+			cout<<"enter the number: ";
+			cin>>b;
+		}
+		friend void operator+(A,B);
+		friend void operator-(A, B);
+		friend void operator*(A,B);
+		friend void operator/(A, B);
+};
+void operator+(A a1,B b1){
+	cout<<"Addition: ";
+	cout<<a1.a+b1.b<<endl;
+}
+void operator-(A a1,B b1){
+	cout<<"Subtraction: ";
+	cout<<a1.a-b1.b<<endl;
+}
+void operator*(A a1,B b1){
+	cout<<"multiplication: ";
+	cout<<a1.a*b1.b<<endl;
+}
+void  operator/(A a1,B b1){
+	cout<<"division: ";
+	cout<<a1.a/b1.b<<endl;
+}
+int main(){
+	A A1;
+	B B1;
+	A1+B1;
+	A1-B1;
+	A1*B1;
+	A1/B1;
+}
